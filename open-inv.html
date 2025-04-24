@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You're Invited</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+    }
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #FF5733;
+    }
+    .intro-text {
+      text-align: center;
+      font-size: 1.2rem;
+      padding: 10px 20px 30px;
+      color: #555;
+    }
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .image-gallery img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .slider {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .slides {
+    display: flex;
+      /* width: 300%;  */
+      animation: slide 12s infinite;
+    }
+    /* .slides img {
+      width: 100%;
+      flex-shrink: 0;
+    } */
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      33% { transform: translateX(0); }
+      36% { transform: translateX(-100%); }
+      66% { transform: translateX(-100%); }
+      69% { transform: translateX(-200%); }
+      100% { transform: translateX(-200%); }
+    }
+    .map-container {
+      padding: 20px;
+      text-align: center;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 15px;
+    }
+    .testimonials {
+      padding: 40px 20px;
+      background-color: #fff;
+      position: relative;
+    }
+    .testimonial {
+      display: none;
+      text-align: center;
+    }
+    .testimonial.active {
+      display: block;
+    }
+    .testimonial img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .testimonial p {
+      font-style: italic;
+      color: #666;
+      max-width: 500px;
+      margin: auto;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .footer-links a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .footer-links i {
+      margin-right: 5px;
+    }
+
+
+    .map-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    height: 300px; /* Default height */
+  }
+
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  /* Smaller height on desktop */
+  @media (min-width: 768px) {
+    .map-container {
+      height: 400px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .map-container {
+      height: 350px;
+    }
+  }
+
+  /* Centered Button Styling */
+  .map-button {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .map-button a {
+    display: inline-block;
+    background-color: #dc3545;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+  .map-button a:hover {
+    background-color: #bb2d3b;
+  }
+
+
+  nav {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+   
+  }
+
+  nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: #007bff; /* Blue on hover */
+  }
+
+  nav a i {
+    font-size: 20px;
+  }
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+   <nav>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    </nav>
+    <h1>Green Haven</h1>
+    <p class="intro-text">Join us as we turn our new house into a home — your presence will make it special!</p>
+  </header>
+
+  <section class="image-gallery">
+    <img src="images/home-front.jpeg" alt="Home Exterior">
+    <div class="slider">
+      <div class="slides">
+        <img src="images/1.jpg" alt="Interior 1">
+        <img src="images/2.jpg" alt="Interior 2">
+        <img src="images/3.jpg" alt="Interior 3">
+        <img src="images/4.jpg" alt="Interior 3">
+      </div>
+    </div>
+    <img src="images/Light Blue Pink Colorful May 2024 Calendar.jpg" alt="Calendar May 10">
+  </section>
+
+  <div class="map-container">
+   <iframe 
+     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115862.87054826449!2d75.78041!3d11.258753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65c7e5cf1fd07%3A0x36e62f26ac9f5d51!2shttps%3A%2F%2Fgoo.gl%2Fmaps%2FYsWaH9ZdK3fkxRuv7!5e0!3m2!1sen!2sin!4v1713950029904!5m2!1sen!2sin" 
+     allowfullscreen="" 
+     loading="lazy" 
+     referrerpolicy="no-referrer-when-downgrade">
+   </iframe>
+ </div>
+ 
+ <!-- Location Button -->
+ <div class="map-button">
+   <a href="https://goo.gl/maps/YsWaH9ZdK3fkxRuv7" target="_blank">
+     Open Location in Google Maps
+   </a>
+ </div>
+ 
+
+ <section class="testimonials">
+   <div class="testimonial active">
+     <img src="images/user_17740782-removebg-preview.png" alt="Family Member">
+     <p>We can't wait to welcome you! </p>
+   </div>
+   <div class="testimonial">
+     <img src="images/user_17740782-removebg-preview.png" alt="Family Member">
+     <p>Make sure to join us, it's going to be warm and wonderful! — Mom</p>
+   </div>
+   <div class="testimonial">
+     <img src="images/user_17740782-removebg-preview.png" alt="Family Member">
+     <p>It’s not a party without you! — Siblings</p>
+   </div>
+ </section>
+  
+
+  <footer>
+    <p style="margin-bottom: 10px;">Greetings from Ashin & Family</p>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/ashin_m_v/" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+      <a href="tel:+919633336202"><i class="fas fa-phone"></i>Contact</a>
+    </div>
+  </footer>
+
+  <script>
+    let current = 0;
+    const testimonials = document.querySelectorAll('.testimonial');
+    setInterval(() => {
+      testimonials[current].classList.remove('active');
+      current = (current + 1) % testimonials.length;
+      testimonials[current].classList.add('active');
+    }, 4000);
+  </script>
+</body>
+</html>
